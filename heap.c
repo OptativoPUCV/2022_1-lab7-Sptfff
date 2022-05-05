@@ -35,7 +35,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-  //heapElem aux = pq->heapArray[0];
+  /*heapElem aux = pq->heapArray[0];
   heapElem mayor;
   int i;
   while(i != pq->capac){
@@ -48,7 +48,7 @@ void heap_pop(Heap* pq){
 
     i++;
   }
-  
+  */
   
 }
 
