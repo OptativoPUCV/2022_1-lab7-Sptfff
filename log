@@ -62,3 +62,13 @@ Thu May  5 15:28:43 UTC 2022:
  tests:  0|4
 total_score: 0/70
 46f3318
+Thu May  5 15:31:24 UTC 2022: 
+ heap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:40:27: error: incompatible types when assigning to type ‘heapElem {aka struct nodo}’ from type ‘void *’
+   pq->heapArray[pq->size] = NULL;
+                           ^
+Compilation failed
+0e13865
