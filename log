@@ -160,3 +160,13 @@ Thu May  5 15:36:33 UTC 2022:
  tests:  0|4
 total_score: 0/70
 7cf900f
+Thu May  5 15:39:54 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_top’:
+heap.c:22:25: error: incompatible types when returning type ‘heapElem {aka struct nodo}’ but ‘void *’ was expected
+     return pq->heapArray[0];
+            ~~~~~~~~~~~~~^~~
+Compilation failed
+809608d
