@@ -19,13 +19,15 @@ typedef struct Heap{
 
 void* heap_top(Heap* pq){
   
-  return heapArray[0];
+  return NULL;
 }
 
 
 
 void heap_push(Heap* pq, void* data, int priority){
-
+  if( pq.size == pq.capac){
+    pq.heapArray = realloc(pq.heapArray, (pq.capac*2)+1);
+  }
 }
 
 
