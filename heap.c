@@ -37,7 +37,7 @@ void heap_push(Heap* pq, void* data, int priority){
 void heap_pop(Heap* pq){
   heapElem aux = pq->heapArray[0];
   heapElem mayor;
-  printf
+
   for(int i = 1; i = pq->capac; i++){
 
     printf("%i", pq->heapArray[i].priority);
