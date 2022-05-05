@@ -121,3 +121,18 @@ heap.c:23:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 f8e8227
+Thu May  5 15:34:03 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_top’:
+heap.c:22:10: error: ‘heapArray’ undeclared (first use in this function)
+   return heapArray[0].data;
+          ^~~~~~~~~
+heap.c:22:10: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:23:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+ef9e2ad
