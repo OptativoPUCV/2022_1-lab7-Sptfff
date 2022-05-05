@@ -18,7 +18,7 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
-  
+  printf("%i", pq->size);
   return NULL;
 }
 
@@ -32,7 +32,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-
+  pq->heapArray[0] = pq->heapArray[pq->size]
 }
 
 Heap* createHeap(){
