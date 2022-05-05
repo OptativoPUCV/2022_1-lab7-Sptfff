@@ -372,3 +372,34 @@ In file included from test.c:2:0:
               ^~~~~~~
 Compilation failed
 5601470
+Thu May  5 16:04:21 UTC 2022: 
+ heap.c | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:40:3: error: statement with no effect [-Werror=unused-value]
+   printf
+   ^~~~~~
+heap.c:41:3: error: expected ‘;’ before ‘for’
+   for(int i = 1; i = pq->capac; i++){
+   ^~~
+heap.c:39:12: error: unused variable ‘mayor’ [-Werror=unused-variable]
+   heapElem mayor;
+            ^~~~~
+heap.c:38:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+   heapElem aux = pq->heapArray[0];
+            ^~~
+heap.c: In function ‘createHeap’:
+heap.c:55:34: error: expected expression before ‘void’
+   Heap* array = (void *) realloc(void* ,size_t);
+                                  ^~~~
+heap.c:55:26: error: too few arguments to function ‘realloc’
+   Heap* array = (void *) realloc(void* ,size_t);
+                          ^~~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:549:14: note: declared here
+ extern void *realloc (void *__ptr, size_t __size)
+              ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+214d0e1
