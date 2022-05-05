@@ -313,3 +313,20 @@ heap.c:51:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 8e20d26
+Thu May  5 15:51:54 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:49:34: error: expected expression before ‘void’
+   Heap* array = (void *) realloc(void* ,size_t);
+                                  ^~~~
+heap.c:49:26: error: too few arguments to function ‘realloc’
+   Heap* array = (void *) realloc(void* ,size_t);
+                          ^~~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:549:14: note: declared here
+ extern void *realloc (void *__ptr, size_t __size)
+              ^~~~~~~
+Compilation failed
+bfaf5bf
