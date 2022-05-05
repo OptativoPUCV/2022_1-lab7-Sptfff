@@ -493,3 +493,16 @@ heap.c:41:14: error: suggest parentheses around assignment used as truth value [
 cc1: all warnings being treated as errors
 Compilation failed
 72a38ec
+Thu May  5 16:06:56 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:41:12: error: expected ‘;’ before ‘:’ token
+   for(i = 1: (i) = pq->capac: i++){
+            ^
+heap.c:41:34: error: expected expression before ‘)’ token
+   for(i = 1: (i) = pq->capac: i++){
+                                  ^
+Compilation failed
+ea95b58
