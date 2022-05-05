@@ -450,3 +450,14 @@ In file included from test.c:2:0:
 cc1: all warnings being treated as errors
 Compilation failed
 b3dfef8
+Thu May  5 16:05:11 UTC 2022: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:41:18: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   for(int i = 1; i = pq->capac; i++){
+                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+b5c87b3

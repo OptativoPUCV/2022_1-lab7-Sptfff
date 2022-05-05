@@ -52,6 +52,6 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-  Heap* array = (void *) realloc(void* ,size_t);
-   return array;
+  //Heap* array = (void *) realloc(void* ,size_t);
+  return NULL;
 }
