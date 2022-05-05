@@ -18,8 +18,8 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
-  printf("%i", pq->size);
-  return NULL;
+  
+  return heapArray[0].data;
 }
 
 
@@ -37,7 +37,7 @@ void heap_pop(Heap* pq){
   pq->heapArray[0] = pq->heapArray[pq->size];
   pq->heapArray[pq->size] = aux;
 
-  free(pq->heapArray[pq->size].data);
+  pq->heapArray[pq->size];
   
 }
 
