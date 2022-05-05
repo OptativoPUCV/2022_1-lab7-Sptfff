@@ -229,3 +229,31 @@ heap.c:44:15: error: ‘Heap {aka struct Heap}’ has no member named ‘priorit
                ^
 Compilation failed
 2f20870
+Thu May  5 15:50:17 UTC 2022: 
+ heap.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:49:26: error: expected expression before ‘void’
+   Heap* array = *realloc(void* ,size_t)
+                          ^~~~
+heap.c:49:18: error: too few arguments to function ‘realloc’
+   Heap* array = *realloc(void* ,size_t)
+                  ^~~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:549:14: note: declared here
+ extern void *realloc (void *__ptr, size_t __size)
+              ^~~~~~~
+In file included from test.c:4:0:
+heap.c:50:4: error: expected ‘,’ or ‘;’ before ‘return’
+    return NULL;
+    ^~~~~~
+heap.c:49:9: error: unused variable ‘array’ [-Werror=unused-variable]
+   Heap* array = *realloc(void* ,size_t)
+         ^~~~~
+heap.c:51:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+ad69a75

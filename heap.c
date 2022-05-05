@@ -37,14 +37,15 @@ void heap_push(Heap* pq, void* data, int priority){
 void heap_pop(Heap* pq){
   heapElem aux;
   aux = pq->heapArray[0];
-  pq = pq[pq->size];
-  pq[pq->size] = aux;
+  pq->heapArray[0] = pq->heapArray[pq->size];
+  pq->heapArray[pq->size] = aux;
 
-  pq[pq->size].data = NULL;
-  pq[pq->size].priority = '\0';
+  pq->heapArray[pq->size].data = NULL;
+  pq->heapArray[pq->size].priority = '\0';
   
 }
 
 Heap* createHeap(){
+  Heap* array = *realloc(void* ,size_t)
    return NULL;
 }
