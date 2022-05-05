@@ -482,3 +482,14 @@ heap.c:41:13: error: suggest parentheses around assignment used as truth value [
 cc1: all warnings being treated as errors
 Compilation failed
 a5138e5
+Thu May  5 16:06:37 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:41:14: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   for(i = 1; (i) = pq->capac; i++){
+              ^
+cc1: all warnings being treated as errors
+Compilation failed
+72a38ec
