@@ -428,3 +428,25 @@ In file included from test.c:2:0:
 cc1: all warnings being treated as errors
 Compilation failed
 0ae6895
+Thu May  5 16:04:55 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:41:18: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   for(int i = 1; i = pq->capac; i++){
+                  ^
+heap.c: In function ‘createHeap’:
+heap.c:55:34: error: expected expression before ‘void’
+   Heap* array = (void *) realloc(void* ,size_t);
+                                  ^~~~
+heap.c:55:26: error: too few arguments to function ‘realloc’
+   Heap* array = (void *) realloc(void* ,size_t);
+                          ^~~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:549:14: note: declared here
+ extern void *realloc (void *__ptr, size_t __size)
+              ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b3dfef8
