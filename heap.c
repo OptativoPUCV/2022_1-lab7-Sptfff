@@ -38,14 +38,15 @@ void heap_pop(Heap* pq){
   //heapElem aux = pq->heapArray[0];
   heapElem mayor;
   int i;
-  for(i = 1; (i) = pq->capac; i++){
+  while(i != pq->capac){
 
     printf("%i", pq->heapArray[i].priority);
     if (mayor.priority <= pq->heapArray[i].priority){
       
       mayor = pq->heapArray[i];
     }
-      
+
+    i++;
   }
   
   
