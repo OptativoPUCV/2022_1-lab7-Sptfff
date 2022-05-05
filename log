@@ -170,3 +170,9 @@ heap.c:22:25: error: incompatible types when returning type ‘heapElem {aka str
             ~~~~~~~~~~~~~^~~
 Compilation failed
 809608d
+Thu May  5 15:40:05 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|4
+total_score: 0/70
+1849a15
