@@ -40,7 +40,7 @@ void heap_pop(Heap* pq){
   int i;
   while(i != pq->capac){
 
-    printf("%i", pq->heapArray[i].priority);
+    printf("%i", mayor.priority);
     if (mayor.priority <= pq->heapArray[i].priority){
       
       mayor = pq->heapArray[i];
