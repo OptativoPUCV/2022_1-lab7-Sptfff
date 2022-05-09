@@ -18,11 +18,12 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
-  if (pq->heapArray != NULL || pq->heapArray[0].priority != 0){
-    return pq->heapArray[0].data;
-  }
   
-  return NULL;
+  if(pq->size == 0){
+    return NULL;
+  }
+
+  return pq->heapArray[0].data;
 }
 
 
@@ -35,20 +36,32 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-  /*heapElem aux = pq->heapArray[0];
+  heapElem aux = pq->heapArray[0];
   heapElem mayor;
+  
+  aux = pq->heapArray[pq->size];
+  pq->heapArray[pq->size] = pq->heapArray[0];//Mueve el dato en posicion[0] al ultimo lugar
+  pq->heapArray[0] = aux;
+
+  pq->heapArray[pq->size].data = NULL;
+  pq->heapArray[pq->size].priority = 0;
+  pq->size--;
+
+  mayor.data = pq->heapArray[0].data;
+  mayor.priority = pq->heapArray[0].priority;
   int i;
   while(i != pq->capac){
 
     //printf("%i", mayor.priority);
     if (mayor.priority <= pq->heapArray[i].priority){
-      
+      aux = mayor;
       mayor = pq->heapArray[i];
+      pq->heapArray[i] = aux;
     }
 
     i++;
   }
-  */
+  
   
 }
 
